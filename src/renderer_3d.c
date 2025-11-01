@@ -121,7 +121,6 @@ void hg_3d_renderer_init(void) {
         .push_constant_size = sizeof(HgModelPush),
         .topology = HG_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST,
         .cull_mode = HG_CULL_MODE_BACK_BIT,
-        .enable_depth_buffer = true,
         .enable_color_blend = false,
     });
 

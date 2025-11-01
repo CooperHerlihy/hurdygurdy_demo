@@ -118,35 +118,36 @@ int main(void) {
         }
 
         if (hg_is_key_down(HG_KEY_SPACE)) {
-            camera_position = hg_move_first_person(
+            camera_position = hg_move_camera_first_person(
                 camera_position, camera_rotation, (HgVec3){0.0f, -1.0f, 0.0f}, (f32)delta * MOVE_SPEED
             );
         }
         if (hg_is_key_down(HG_KEY_LSHIFT)) {
-            camera_position = hg_move_first_person(
+            camera_position = hg_move_camera_first_person(
                 camera_position, camera_rotation, (HgVec3){0.0f, 1.0f, 0.0f}, (f32)delta * MOVE_SPEED
             );
         }
         if (hg_is_key_down(HG_KEY_W)) {
-            camera_position = hg_move_first_person(
+            camera_position = hg_move_camera_first_person(
                 camera_position, camera_rotation, (HgVec3){0.0f, 0.0f, 1.0f}, (f32)delta * MOVE_SPEED
             );
         }
         if (hg_is_key_down(HG_KEY_S)) {
-            camera_position = hg_move_first_person(
+            camera_position = hg_move_camera_first_person(
                 camera_position, camera_rotation, (HgVec3){0.0f, 0.0f, -1.0f}, (f32)delta * MOVE_SPEED
             );
         }
         if (hg_is_key_down(HG_KEY_A)) {
-            camera_position = hg_move_first_person(
+            camera_position = hg_move_camera_first_person(
                 camera_position, camera_rotation, (HgVec3){-1.0f, 0.0f, 0.0f}, (f32)delta * MOVE_SPEED
             );
         }
         if (hg_is_key_down(HG_KEY_D)) {
-            camera_position = hg_move_first_person(
+            camera_position = hg_move_camera_first_person(
                 camera_position, camera_rotation, (HgVec3){1.0f, 0.0f, 0.0f}, (f32)delta * MOVE_SPEED
             );
         }
+
         hg_3d_renderer_update_view(camera_position, camera_zoom, camera_rotation);
 
         HgError begin_result = hg_frame_begin();
